@@ -19,7 +19,7 @@ public class Main extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Main start = new Main();
-                Dimension d = new Dimension(480, 450);
+                Dimension d = new Dimension(500, 530);
                 start.setMinimumSize(d);
                 start.setMaximumSize(d);
                 start.setPreferredSize(d);
@@ -27,6 +27,7 @@ public class Main extends JFrame {
                 start.setResizable(false);
                 start.setTitle("Ball Sort");
                 start.setVisible(true);
+                
             }
         });
     }
@@ -35,7 +36,6 @@ public class Main extends JFrame {
         this.setDefaultCloseOperation(3);
         JPanel ballSortPanel = new JPanel();
         final ScreenPanel screenPanel = new ScreenPanel();
-
         this.addMouseListener(screenPanel);
         Dimension tubesPanelDim = new Dimension(480, 250);
         screenPanel.setOpaque(true);
@@ -45,9 +45,14 @@ public class Main extends JFrame {
         screenPanel.setBorder(BorderFactory.createLineBorder(Color.black));
         screenPanel.setBackground(new Color(150, 190, 120));
 
+        JLabel clickStatus = new JLabel("Ati dat click de %d ori!");
+
         JLabel tNumContainersLbl = new JLabel("Number of Containers");
+
         Integer[] tNumberTubes = new Integer[]{3, 4, 5, 6, 7};
+
         final JComboBox<Integer> tComboBoxNumContainers = new JComboBox(tNumberTubes);
+
         final JButton startButton = new JButton("Start");
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aEvt) {
@@ -86,11 +91,39 @@ public class Main extends JFrame {
 
         GroupLayout ballSortPanelLayout = new GroupLayout(ballSortPanel);
         ballSortPanel.setLayout(ballSortPanelLayout);
-        ballSortPanelLayout.setHorizontalGroup(ballSortPanelLayout.createParallelGroup(Alignment.CENTER).addComponent(screenPanel).addGroup(ballSortPanelLayout.createSequentialGroup().addGroup(ballSortPanelLayout.createParallelGroup(Alignment.LEADING).addGroup(ballSortPanelLayout.createSequentialGroup().addGap(160, 160, 160).addComponent(tNumContainersLbl)).addGroup(ballSortPanelLayout.createSequentialGroup().addGap(215, 215, 215).addComponent(tComboBoxNumContainers, -2, -1, -2)).addGroup(ballSortPanelLayout.createSequentialGroup().addGap(198, 198, 198).addComponent(startButton)).addGroup(ballSortPanelLayout.createSequentialGroup().addGap(195, 195, 195).addComponent(tResetButton))).addContainerGap(132, 32767)));
+
+        ballSortPanelLayout.setHorizontalGroup
+                (ballSortPanelLayout
+                        .createParallelGroup(Alignment.CENTER)
+                        .addComponent(screenPanel)
+                        .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                .addGroup(ballSortPanelLayout.createParallelGroup(Alignment.LEADING)
+                                        .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                        .addGap(160, 160, 160)
+                                        .addComponent(tNumContainersLbl))
+                                .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                        .addGap(215, 215, 215)
+                                        .addComponent(tComboBoxNumContainers, -2, -1, -2))
+                                .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                         .addGap(160, 160, 160)
+                                         .addComponent(clickStatus))
+                                .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                        .addGap(198, 198, 198)
+                                        .addComponent(startButton))
+                                .addGroup(ballSortPanelLayout.createSequentialGroup()
+                                        .addGap(195, 195, 195)
+                                        .addComponent(tResetButton))).addContainerGap(132, 32767)));
+
         ballSortPanelLayout.setVerticalGroup(
-                ballSortPanelLayout.createParallelGroup(Alignment.LEADING).addComponent(screenPanel)
-                        .addGroup(Alignment.TRAILING, ballSortPanelLayout.createSequentialGroup()
+                ballSortPanelLayout
+                        .createParallelGroup(Alignment.LEADING)
+                        .addComponent(screenPanel)
+                        .addGroup(Alignment.TRAILING, ballSortPanelLayout
+                                .createSequentialGroup()
                                 .addGap(280, 280, 280)
+                                .addPreferredGap(ComponentPlacement.RELATED)
+                                .addComponent(clickStatus)
+                                .addPreferredGap(ComponentPlacement.RELATED)
                                 .addComponent(tNumContainersLbl)
                                 .addPreferredGap(ComponentPlacement.RELATED)
                                 .addComponent(tComboBoxNumContainers, -2, -1, -2)

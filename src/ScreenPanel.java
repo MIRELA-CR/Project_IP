@@ -5,7 +5,6 @@ import javax.swing.*;
 import Objects.*;
 
 public class ScreenPanel extends JPanel implements MouseListener {
-    public static Component ClicksPanel;
     private ArrayList<Tube> mTubesList;
     private final int SMALLEST_NUM_EMPTY_TUBES = 1;
     private final int LARGEST_NUM_EMPTY_TUBES = 2;
@@ -17,7 +16,7 @@ public class ScreenPanel extends JPanel implements MouseListener {
 
     }
 
-    class ClicksPanel extends MouseAdapter implements Observer {
+    static class ClicksPanel extends MouseAdapter implements Observer {
         private JLabel statusBar = new JLabel();
         @Override
         public void update(Observer o, int moves) {
