@@ -1,8 +1,9 @@
 package Objects;
 
 //FACTORY METHOD
-/*Objects.ObjCreator este o clasa abstracta cu rolul de Creator, iar CreateBall si CreateTube devin
-clase mostenite si implementate cu noi caracteristici dupa sablonul creational Factory Method*/
+/*ObjCreator este o clasa abstracta cu rolul de Creator de tip “BALL” si “TUBE”.
+        Aceasta cuprinde metodele getColor() si paintComponent(), iar Ball si Tube devin clase cu metodele mentionate intr-o forma implementata,
+        dar si cu noi caracteristici unice, diferite unele de altele, pe care clasele nu le au in comun.*/
 
 import java.awt.*;
 

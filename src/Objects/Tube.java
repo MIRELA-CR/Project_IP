@@ -8,11 +8,11 @@ public class Tube extends JComponent implements ObjCreator {
 
     Tube() {}
     private String tubeName;
-    /*private final int TUBE_COORD = 1;
+    private final int TUBE_COORD = 1;
     private final int X_COORD = 1;
     private final int RECT_HEIGHT = 232;
     private final int RECT_WIDTH = 58;
-    private final int Y_COORD = 174;*/
+    private final int Y_COORD = 174;
     private Color tubeColor;
 
     private Stack<Ball> ballList;

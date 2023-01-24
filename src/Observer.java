@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
+//OBSERVER//
+/*Clasa Subject contine metode pentru inregistrare, stergere din memorie is actualizare a evenimentului de click al mouse-lui.
+        Aceste metode sunt mai apoi implementate in clasa MovesData cu actiunile respective pentru a tine un log al schimbarilor
+        (aici, cresterea numarului de click-uri facute pe ecran). Observer creaza o interfata de upate,
+        folosita de CurrentMCount prin adaugarea unei unitati la numarul inregistrat de pana acum.*/
+
 interface Subject {
     public void registerObs(Observer o);
     public void unregisterObs(Observer o);

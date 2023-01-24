@@ -43,9 +43,9 @@ public class Main extends JFrame {
         screenPanel.setMinimumSize(tubesPanelDim);
         screenPanel.setPreferredSize(tubesPanelDim);
         screenPanel.setBorder(BorderFactory.createLineBorder(Color.black));
-        screenPanel.setBackground(new Color(150, 190, 120));
+        screenPanel.setBackground(new Color(69, 85, 107));
 
-        JLabel clickStatus = new JLabel("Ati dat click de %d ori!");
+        JLabel clickStatus = new JLabel("You clicked %d times!");
 
         JLabel tNumContainersLbl = new JLabel("Number of Containers");
 
